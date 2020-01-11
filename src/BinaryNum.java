@@ -7,7 +7,6 @@ public class BinaryNum {
         System.out.println("Input binary number: ");
         String bin = sc.nextLine();
         int binNum = Integer.parseInt(bin, 2);
-
         System.out.println(binNum);
     }
 }
