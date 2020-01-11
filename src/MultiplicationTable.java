@@ -1,11 +1,9 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
 
-      //  int [] tab = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-       // int [] q = {};
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите целое число от 1 до 10: ");
         int num = sc.nextInt();
