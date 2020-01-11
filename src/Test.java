@@ -12,7 +12,7 @@ public class Test {
         System.out.print("ves? ");
         float ves = in.nextFloat();
         System.out.printf("Name: %s \n Age = %d \n Height: %.2f \n", name, age, ves);
-        System.out.print("line");
+        System.out.print("line123");
 
     }
 }
