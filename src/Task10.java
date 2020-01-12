@@ -20,7 +20,7 @@ public class Task10 {
                 }
             }
 
-        System.out.println("Значение первой строки матрицы, умноженные на 3: ");
+        System.out.println("Значения первой строки матрицы, умноженные на 3: ");
         System.out.println("\n");
 
         for (int i = 0; i < mat.length; i++) {
