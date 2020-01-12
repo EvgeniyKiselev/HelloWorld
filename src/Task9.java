@@ -13,7 +13,7 @@ public class Task9 {
         }
         System.out.println("Элементы вашего массива, умноженные на 2: ");
         for (int y = 0; y < masL; y++) {
-            System.out.println(mas[y] * 2);
+            System.out.print((mas[y] * 2)+"  ");
         }
     }
 }
