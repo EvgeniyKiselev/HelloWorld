@@ -1,31 +1,22 @@
 import java.util.Scanner;
-
+//Ввод/вывод данных для матрицы
 public class Task10 {
     public static void main(String[] args) {
-
-        int o, p;
-        int g, h;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите высоту матрицы: ");
+              Scanner sc = new Scanner(System.in);
+        System.out.println("Введите количество строк: ");
         int matH = sc.nextInt();
-        System.out.println("Введите длину матрицы: ");
+        System.out.println("Введите количество столбцов: ");
         int matL = sc.nextInt();
         int mat[][] = new int[matH][matL];
         System.out.println("Введите значения матрицы поочередно: ");
-
-
-            for (o = 0; o < matH; ++o) {
-                for (p = 0; p < matL; ++p) {
+            for (int o = 0; o < matH; ++o) {
+                for (int p = 0; p < matL; ++p) {
                     mat[o][p] = sc.nextInt();
                 }
             }
-
         System.out.println("Значения первой строки матрицы, умноженные на 3: ");
-        System.out.println("\n");
-
-        for (int i = 0; i < mat.length; i++) {
-            System.out.print((mat[0][i]*3) + "  ");
-
+            for (int i = 0; i < matL; i++) {
+            System.out.print(mat[0][i] * 3 + "  ");
         }
 
     }
