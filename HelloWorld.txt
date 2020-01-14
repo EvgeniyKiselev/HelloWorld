@@ -1,6 +1,0 @@
-print("Hello world);
-print("Hello everybody);
-print("Hello world);
-1;
-1;
-1;
