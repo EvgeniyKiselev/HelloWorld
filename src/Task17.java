@@ -3,10 +3,9 @@ import java.io.*;
 public class Task17 {
     public static void main(String[] args) throws  IOException {
         String iText;
-        String result = "";
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите текст для записи в файл notes \nдля окончания записи введите слово 'стоп'");
-        FileWriter writer = new FileWriter("C://Users//...//Desktop//notes.txt");
+        FileWriter writer = new FileWriter("C://Users//EKiselev//Desktop//notes.txt");
         while (true) {
                 System.out.print(": ");
                 iText = br.readLine();
