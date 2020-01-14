@@ -21,7 +21,7 @@ public class Task15 {
         }
         System.out.println("Элементы вашего массива, отсортированные метедом пузырька: ");
         for (int y = 0; y < masL; y++) {
-            System.out.print(mas[y]+" ");
+            System.out.print(mas[y] + " ");
         }
     }
 }
