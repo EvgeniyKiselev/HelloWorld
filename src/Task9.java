@@ -1,5 +1,7 @@
 import java.util.Scanner;
+
 //Ввод/вывод данных для массива
+
 public class Task9 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,6 +12,7 @@ public class Task9 {
         for (int i = 0; i < masL; i++) {
             mas[i] = sc.nextInt();
         }
+
         System.out.println("Элементы вашего массива, умноженные на 2: ");
         for (int y = 0; y < masL; y++) {
             System.out.println(mas[y] * 2);
