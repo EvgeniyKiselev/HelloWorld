@@ -1,5 +1,7 @@
 import java.util.Scanner;
-//Отработка арифметических операций
+
+///Отработка арифметических операций
+
 public class Task6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -12,6 +14,7 @@ public class Task6 {
         int z = sc.nextInt();
         int average = (x + y + z) / 3;
         double avCut = average % 2;
+
         System.out.println("Среднее арифметическое введенных чисел: " + average);
         if (avCut == 0) {
             System.out.println("Среднее арифметическое, деленное на 2 без остатка: " + average/2);
