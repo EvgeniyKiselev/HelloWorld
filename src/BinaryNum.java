@@ -1,12 +1,20 @@
 import java.util.Scanner;
+
 //Отработка поразрядных операций
+
 public class BinaryNum {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+
+        /// получение данных
+        
+        Scanner inputBinaryNum = new Scanner(System.in);
         System.out.println("Введите число в двоичной системе: ");
-        String bin = sc.nextLine();
-        int binNum = Integer.parseInt(bin, 2);
-        System.out.println(binNum);
+        String binaryNum = inputBinaryNum.nextLine();
+
+        /// конвертация
+
+        int binToDecimalNum = Integer.parseInt(binaryNum, 2);
+        System.out.println(binToDecimalNum);
     }
 }
 
