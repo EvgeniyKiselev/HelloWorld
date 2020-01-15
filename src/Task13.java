@@ -1,19 +1,22 @@
 import java.util.Scanner;
+
 //Сравнение двух строк
+
 public class Task13 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanInputString = new Scanner(System.in);
         System.out.println("Введите первую строку: ");
-        String firstStr = sc.nextLine();
+        String firstScannedStr = scanInputString.nextLine();
         System.out.println("Введите вторую строку: ");
-        String secondStr = sc.nextLine();
-        if (firstStr.length() > secondStr.length()) {
-            System.out.println(firstStr);
+        String secondScannedStr = scanInputString.nextLine();
+
+        if (firstScannedStr.length() > secondScannedStr.length()) {
+            System.out.println(firstScannedStr);
         }
-        else if (firstStr.length() < secondStr.length()) {
-            System.out.println(secondStr);
+        else if (firstScannedStr.length() < secondScannedStr.length()) {
+            System.out.println(secondScannedStr);
         }
         else
-            System.out.println("Обе строки имеют одинаковую длину: " + firstStr.length());
+            System.out.println("Обе строки имеют одинаковую длину: " + firstScannedStr.length());
     }
 }
