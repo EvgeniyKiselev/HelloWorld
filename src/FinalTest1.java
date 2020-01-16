@@ -7,55 +7,63 @@ import java.util.InputMismatchException;
 
 public class FinalTest1<CheckString> {
     public static void main(String[] args) throws IOException {
-        BufferedReader inputString = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите число в двоичной системе: ");
-        String binaryNumStr = inputString.readLine();
-
-        ///проверка корректности введенных данных
-
-        boolean check = checkString(binaryNumStr);
-        while (!check) {
-            System.out.println("Некорректный ввод, введите число в двоичной системе: ");
-            inputString = new BufferedReader(new InputStreamReader(System.in));
-            binaryNumStr = inputString.readLine();
-            check = checkString(binaryNumStr);
-        }
-        inputString.close();
-
-        ///перевод в десятичную систему
-
-        int doubleToDecimal = 0;
-        try {
-            for (int j = 0; j < binaryNumStr.length(); j++) {
-                doubleToDecimal <<= 1;
-                if (binaryNumStr.charAt(j) == '1') doubleToDecimal++;
-            }
-            System.out.println(binaryNumStr + " В десятичной системе = " + doubleToDecimal);
-        } catch (InputMismatchException ex) {System.out.println("Это не число" + ex);
-        } finally {
-            inputString.close();
-        }
+        String binaryNumStr = correctInputString();
+        binaryConvertToDecimal(binaryNumStr);
+        System.out.println(binaryNumStr + " В десятичной системе = " + binaryConvertToDecimal(binaryNumStr));
     }
 
-    public static boolean checkString(String writeFromConsoleString) {
-        if (writeFromConsoleString == null || writeFromConsoleString.length() == 0) return false;
+    private static String correctInputString() throws IOException {
+        System.out.println("Введите число в двоичной системе: ");
 
-        int i = 0;
-        if (writeFromConsoleString.charAt(0) == '-') {
-            if (writeFromConsoleString.length() == 1) {
-                return false;
+        boolean check = false;
+        String binaryNumStr = null;
+
+        while (!check) {
+            binaryNumStr = new BufferedReader(new InputStreamReader(System.in)).readLine();
+            check = checkString(binaryNumStr);
+
+            if (!check) {
+                System.out.println("Некорректный ввод, введите число в двоичной системе: ");
             }
-            i = 1;
+        }
+
+        return binaryNumStr;
+    }
+
+    private static int binaryConvertToDecimal(String binaryNumStr) {
+        int binaryToDecimal = 0;
+
+        try {
+            for (int j = 0; j < binaryNumStr.length(); j++) {
+                binaryToDecimal <<= 1;
+
+                if (binaryNumStr.charAt(j) == '1') {
+                    binaryToDecimal++;
+                }
+            }
+        }
+        catch (InputMismatchException ex) {
+            System.out.println("Это не число" + ex);
+        }
+
+        return binaryToDecimal;
+    }
+
+    private static boolean checkString(String writeFromConsoleString) {
+        if (writeFromConsoleString.isEmpty() || writeFromConsoleString.contains(" ")) {
+            return false;
         }
 
         char c;
-        for (; i < writeFromConsoleString.length(); i++) {
+
+        for (int i = 0; i < writeFromConsoleString.length(); i++) {
             c = writeFromConsoleString.charAt(i);
-            if (!(c >= '0' && c <= '1')) {
+
+            if (c != '0' && c != '1') {
                 return false;
             }
         }
+
         return true;
     }
-
 }
