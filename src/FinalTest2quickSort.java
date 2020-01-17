@@ -3,8 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FinalTest2quickSort {
-
-    public static void quickSort(int[] newArray, int lowNum, int highNum) {
+    private static void quickSort(int[] newArray, int lowNum, int highNum) {
         if (newArray.length == 0) {
             return;
         }
@@ -40,14 +39,13 @@ public class FinalTest2quickSort {
         Scanner scanInputInt = new Scanner(System.in);
         System.out.println("Введите длину массива: ");
         int newArrayColumnsNum = scanInputInt.nextInt();
-        int newArray[] = new int[newArrayColumnsNum];
+        int[] newArray = new int[newArrayColumnsNum];
         System.out.println("Введите значения элементов массива: ");
         for (int i = 0; i < newArrayColumnsNum; i++) {
             newArray[i] = scanInputInt.nextInt();
         }
-        int lowNum = 0;
-        int highNum = newArray.length - 1;
-        quickSort(newArray, lowNum, highNum);
+
+        quickSort(newArray, 0, newArray.length - 1);
         System.out.println("Элементы массива отсортированные методом быстрой сортировки " + Arrays.toString(newArray));
     }
 

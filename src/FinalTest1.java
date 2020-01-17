@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 ///Ввести с консоли число в бинарном формате. Перевести его в десятичный формат, записать в переменную int и вывести на экран.
 /// Необходимо использовать циклы, нельзя использования готовые методы языка Java, для перевода числа из одной системы счисления в другую.
 
-public class FinalTest1<CheckString> {
+public class FinalTest1 {
     public static void main(String[] args) throws IOException {
         String binaryNumStr = correctInputString();
         binaryConvertToDecimal(binaryNumStr);
@@ -54,10 +54,8 @@ public class FinalTest1<CheckString> {
             return false;
         }
 
-        char c;
-
         for (int i = 0; i < writeFromConsoleString.length(); i++) {
-            c = writeFromConsoleString.charAt(i);
+            char c = writeFromConsoleString.charAt(i);
 
             if (c != '0' && c != '1') {
                 return false;

@@ -6,15 +6,11 @@ import java.util.Scanner;
 ///(Пример для теста работы программы: Курс доллара = 67,55, Количество рублей: 1000, Итого: 14,80 долларов)
 
 public class FinalTest3 {
-    public static double separatorCheck(String inputUsdRate) {
-        String separatedInputUsdRate = null;
+    private static double separatorCheck(String inputUsdRate) {
         if (inputUsdRate.contains(",")) {
-            separatedInputUsdRate = inputUsdRate.replace(",", ".");
+            inputUsdRate = inputUsdRate.replace(",", ".");
         }
-        else {
-            separatedInputUsdRate = inputUsdRate;
-        }
-        return Double.parseDouble(separatedInputUsdRate);
+        return Double.parseDouble(inputUsdRate);
     }
     public static void main(String[] args) throws InputMismatchException {
         Scanner scanInputString = new Scanner(System.in);
@@ -23,10 +19,6 @@ public class FinalTest3 {
         System.out.println("Введите сумму в рублях: ");
         String inputRurForConvert = scanInputString.nextLine();
 
-        double usdRate = 0;
-        double rurForConvert = 0;
-        usdRate =  separatorCheck(inputUsdRate);
-        rurForConvert = separatorCheck(inputRurForConvert);
-        System.out.println("Итого: " + String.format("%.2f", rurForConvert / usdRate) + " долларов");
+        System.out.println("Итого: " + String.format("%.2f", separatorCheck(inputRurForConvert) / separatorCheck(inputUsdRate)) + " долларов");
     }
 }
