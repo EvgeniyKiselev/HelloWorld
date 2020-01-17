@@ -5,7 +5,7 @@ public class Task15 {
         Scanner scanInputInt = new Scanner(System.in);
         System.out.println("Введите длину массива: ");
         int arrayColumnsNum = scanInputInt.nextInt();
-        int inputArray[] = new int[arrayColumnsNum];
+        int[] inputArray = new int[arrayColumnsNum];
         System.out.println("Введите значения элементов массива: ");
         for (int i = 0; i < arrayColumnsNum; i++) {
             inputArray[i] = scanInputInt.nextInt();

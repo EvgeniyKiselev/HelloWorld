@@ -7,7 +7,7 @@ public class Task9 {
         Scanner scanInputInt = new Scanner(System.in);
         System.out.println("Введите длину массива: ");
         int newArrayColumnsNum = scanInputInt.nextInt();
-        int newArray[] = new int[newArrayColumnsNum];
+        int[] newArray = new int[newArrayColumnsNum];
         System.out.println("Введите значения элементов массива: ");
         for (int i = 0; i < newArrayColumnsNum; i++) {
             newArray[i] = scanInputInt.nextInt();

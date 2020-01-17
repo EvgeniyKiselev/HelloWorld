@@ -7,7 +7,7 @@ public class Task10 {
         int matrixRowsNum = scanInputInt.nextInt();
         System.out.println("Введите количество столбцов: ");
         int matrixColumnsNum = scanInputInt.nextInt();
-        int mat[][] = new int[matrixRowsNum][matrixColumnsNum];
+        int[][] mat = new int[matrixRowsNum][matrixColumnsNum];
         System.out.println("Введите значения матрицы поочередно: ");
         for (int o = 0; o < matrixRowsNum; ++o) {
             for (int p = 0; p < matrixColumnsNum; ++p) {

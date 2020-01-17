@@ -17,7 +17,7 @@ public class Task6 {
 
         System.out.println("Среднее арифметическое введенных чисел: " + average);
         if (averageCutOn2 == 0) {
-            System.out.println("Среднее арифметическое, деленное на 2 без остатка: " + average/2);
+            System.out.println("Среднее арифметическое, деленное на 2 без остатка: " + average / 2);
         }
         else {
             System.out.println("Среднее арифметическое введенных чисел не делится на 2 без остатка");

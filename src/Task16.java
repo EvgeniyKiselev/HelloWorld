@@ -4,11 +4,9 @@ import java.io.*;
 
 public class Task16 {
     public static void main(String[] args) {
-        String stringFromFile;
-        try (BufferedReader bufferRead = new BufferedReader
-                (new FileReader("notes.txt")))
+        try (BufferedReader bufferRead = new BufferedReader(new FileReader("notes.txt")))
         {
-            while ((stringFromFile = bufferRead.readLine()) != null) {
+            for (String stringFromFile = bufferRead.readLine(); stringFromFile != null; stringFromFile = bufferRead.readLine()) {
                 System.out.println(stringFromFile);
             }
         } catch(IOException exc){
